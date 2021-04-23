@@ -48,7 +48,7 @@ export function PlantSelect() {
 
   async function fetchPlants() {
     const { data } = await api.get(
-      `plants?_sort=name&_order=asc&_page=${page}&_limit{2}`
+      `plants?_sort=name&_order=asc&_page=${page}&_limit=8`
     );
 
     if (!data) return setLoading(true);
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingBottom: 5,
     marginLeft: 32,
-    marginRight: 32,
+    marginVertical: 32,
   },
   plants: {
     flex: 1,
